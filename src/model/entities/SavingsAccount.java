@@ -19,7 +19,7 @@ public abstract class SavingsAccount extends Account{
 	
 	@Override
 	public void withdraw(double amount) {
-		if(amount > balance) throw new DomainException("Withdraw greater than balance");//WithdrawGreaterThenBalance;
+		if(amount > balance) throw new DomainException("Withdraw greater than balance");
 		balance -= amount;
 	}
 

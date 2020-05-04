@@ -5,7 +5,7 @@ import model.exceptions.DomainException;
 
 public class BusinessAccount extends Account{
 	
-	double withdrawLimit;
+	private double withdrawLimit;
 	
 	public BusinessAccount() {
 		super();
@@ -18,8 +18,8 @@ public class BusinessAccount extends Account{
 	
 	@Override
 	public void withdraw(double amount) {
-		if(amount > balance) throw new DomainException("Withdraw greater than balance");//WithdrawGreaterThenBalance;
-		if(amount > withdrawLimit) throw new DomainException("Withdraw limit exceeded");//WithdrawLimitExceeded;
+		if(amount > balance) throw new DomainException("Withdraw greater than balance");
+		if(amount > withdrawLimit) throw new DomainException("Withdraw limit exceeded");
 		balance -= amount;
 	}
 	

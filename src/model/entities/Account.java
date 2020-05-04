@@ -5,10 +5,10 @@ import model.exceptions.DomainException;
 
 public abstract class Account {
 
-	final int number;
-	final String holder; 
-	double balance;
-	final Banks bank;
+	private final int number;
+	private final String holder; 
+	protected double balance;
+	private final Banks bank;
 
 	public Account() {
 		this.number = 0;
@@ -42,6 +42,10 @@ public abstract class Account {
 
 	public double getBalance() {
 		return balance;
+	}
+
+	public Banks getBank() {
+		return bank;
 	}
 
 }
